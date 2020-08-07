@@ -24,7 +24,10 @@ humans = [
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
 print("Starts with D:")
-a = [p.name for p in humans if p.name.startswith('D') ]
+# a = [p.name for p in humans if p.name.startswith('D') ]
+# print(a)
+
+a = [p.name for p in humans if p.name[0] == 'D']
 print(a)
 
 # Write a list comprehension that creates a list of names of everyone
@@ -61,7 +64,7 @@ print(f)
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 print("All names uppercase:")
-g = [(p.name.upper(), p.age + 5) for p in humans]
+g = [Human(p.name.upper(), p.age + 5) for p in humans]
 print(g)
 
 # Write a list comprehension that contains the square root of all the ages.
